@@ -1,1 +1,7 @@
 c:\users\mre\documents\visual studio 2015\Projects\FactorialCodeWars\FactorialCodeWars\bin\Debug\FactorialCodeWars.exe.config
+C:\Users\MRE8Air\Documents\Visual Studio 2015\Projects\FactorialCodeWars\FactorialCodeWars\bin\Debug\FactorialCodeWars.exe.config
+C:\Users\MRE8Air\Documents\Visual Studio 2015\Projects\FactorialCodeWars\FactorialCodeWars\bin\Debug\FactorialCodeWars.exe
+C:\Users\MRE8Air\Documents\Visual Studio 2015\Projects\FactorialCodeWars\FactorialCodeWars\bin\Debug\FactorialCodeWars.pdb
+C:\Users\MRE8Air\Documents\Visual Studio 2015\Projects\FactorialCodeWars\FactorialCodeWars\obj\Debug\FactorialCodeWars.csprojResolveAssemblyReference.cache
+C:\Users\MRE8Air\Documents\Visual Studio 2015\Projects\FactorialCodeWars\FactorialCodeWars\obj\Debug\FactorialCodeWars.exe
+C:\Users\MRE8Air\Documents\Visual Studio 2015\Projects\FactorialCodeWars\FactorialCodeWars\obj\Debug\FactorialCodeWars.pdb
