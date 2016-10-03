@@ -12,16 +12,48 @@ using System.Threading.Tasks;
 
 namespace FactorialCodeWars
 {
+
+    public class IncorrectInputException : Exception
+    {
+        public IncorrectInputException()
+        {
+        }
+
+        public IncorrectInputException(string message)
+            : base(message)
+        {
+        }
+
+        public IncorrectInputException(string message, Exception inner)
+            : base(message, inner)
+        {
+        }
+    }
     class Program
     {
         static int CalculateFactorial(int input)
         {
-            int result = 0;
-
-            for (int i = input; i < 0; i--)
+            int result = input;
+            try
             {
-                result = input * input - 1;
+
+                for (int i = 1; i < input; i++)
+                {
+                    result = result * (input - i);
+                }
+
             }
+            catch (IncorrectInputException e) when (input <= 0 || input > 12 )
+            {
+                Console.Clear();
+                Console.WriteLine(e.Message("NO!!!"));
+                Console.WriteLine("Press any key to repeat.");
+                Console.ReadKey();
+                //throw;
+            }
+
+
+            
 
 
             return result;
@@ -30,9 +62,9 @@ namespace FactorialCodeWars
 
         static void Main(string[] args)
         {
-            int input = 5;
+            int input = 13;
             int result = CalculateFactorial(input);
-            Console.WriteLine("The factorial of {0} = {1} " , input, result );
+            Console.WriteLine("!{0} is {1}", input, result );
             Console.ReadKey();
         }
     }
