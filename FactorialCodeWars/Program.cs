@@ -12,72 +12,38 @@ using System.Threading.Tasks;
 
 namespace FactorialCodeWars
 {
-    //may not need this custom exception class
-    public class IncorrectInputException : Exception
-    {
-        public IncorrectInputException()
-        {
-        }
-
-        public IncorrectInputException(string message)
-            : base(message)
-        {
-        }
-
-        public IncorrectInputException(string message, Exception inner)
-            : base(message, inner)
-        {
-        }
-    }
+  
     class Program
     {
-        //this does not work as intended
-        static int CalculateFactorial(int input)
+        
+        static int CalculateFactorial(int n)
         {
-            bool flag = true;
-            int result = input;
-            while (flag)
-            {
-                Console.Clear();
-                Console.WriteLine("Enter a number");
-                result = int.Parse( Console.ReadLine());
 
-            }
-            if (input <=0 || input > 12)
-            {
-                try
-                {
-                    throw new ArgumentOutOfRangeException();
-                }
-                catch (ArgumentOutOfRangeException e)
-                {
+            int result = n;
 
-                    Console.WriteLine("Input must be more than zero and less than 13!");
-                    Console.WriteLine("Press any key to contiue");
-                }
-             
+            if (result == 0)
+            {
+                result = 1;
+                return result;
             }
             else
             {
-                
-                for (int i = 1; i < input; i++)
+
+                for (int i = 1; i < n; i++)
                 {
-                    result = result * (input - i);
+                    result = result * (n - i);
                 }
 
             }
-
-            flag = false;
-            Console.ReadKey();
-         
-
+                
+       
             return result;
         }
 
 
         static void Main(string[] args)
         {
-            int input = 13;
+            int input = 5;
             int result = CalculateFactorial(input);
             Console.WriteLine("!{0} is {1}", input, result );
             Console.ReadKey();
