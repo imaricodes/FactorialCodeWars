@@ -5,11 +5,14 @@ Write a function to calculate factorial for a given input. If input is below 0 o
 
 I could do this using a for loop, but from recent experience, I will try this using the Enumerable class and Linq.
 
-Procedure:
+Procedure??:
 
 1. Input is validated. If not valid, throw and out of range exception (try catch?) If input is 0, bypass step two and output 1
 2. Select each number in range of 0 - n + 1 ( +1 includes the top of the range). I think this is a select method in the enumerable class?
 	*no sorting needed because... multiplication
 3. Multiply the items in the selected range. This is the factorial
-4. 
+
+
+20161002
+Working out Try-Catch problem. How do I throw a specific exception based on a condition? In this case, I was to throw an exception when the user input is out of a specified range.
 

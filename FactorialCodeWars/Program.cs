@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace FactorialCodeWars
 {
-
+    //may not need this custom exception class
     public class IncorrectInputException : Exception
     {
         public IncorrectInputException()
@@ -31,30 +31,45 @@ namespace FactorialCodeWars
     }
     class Program
     {
+        //this does not work as intended
         static int CalculateFactorial(int input)
         {
+            bool flag = true;
             int result = input;
-            try
+            while (flag)
             {
+                Console.Clear();
+                Console.WriteLine("Enter a number");
+                result = int.Parse( Console.ReadLine());
 
+            }
+            if (input <=0 || input > 12)
+            {
+                try
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
+                catch (ArgumentOutOfRangeException e)
+                {
+
+                    Console.WriteLine("Input must be more than zero and less than 13!");
+                    Console.WriteLine("Press any key to contiue");
+                }
+             
+            }
+            else
+            {
+                
                 for (int i = 1; i < input; i++)
                 {
                     result = result * (input - i);
                 }
 
             }
-            catch (IncorrectInputException e) when (input <= 0 || input > 12 )
-            {
-                Console.Clear();
-                Console.WriteLine(e.Message("NO!!!"));
-                Console.WriteLine("Press any key to repeat.");
-                Console.ReadKey();
-                //throw;
-            }
 
-
-            
-
+            flag = false;
+            Console.ReadKey();
+         
 
             return result;
         }
