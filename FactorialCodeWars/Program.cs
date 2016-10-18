@@ -26,12 +26,18 @@ namespace FactorialCodeWars
                 result = 1;
                 return result;
             }
+            else if (result < 0 || result > 12)
+            {
+                throw new ArgumentOutOfRangeException();
+               
+            }
             else
             {
 
                 for (int i = 1; i < n; i++)
                 {
                     result = result * (n - i);
+                   
                 }
 
             }
@@ -43,9 +49,13 @@ namespace FactorialCodeWars
 
         static void Main(string[] args)
         {
-            int input = 5;
-            int result = CalculateFactorial(input);
-            Console.WriteLine("!{0} is {1}", input, result );
+            for (int i = 0; i <= 12; i++)
+            {
+                CalculateFactorial(i);
+            }
+
+            CalculateFactorial(1);
+          
             Console.ReadKey();
         }
     }
